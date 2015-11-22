@@ -2,23 +2,21 @@
     <head>
         <title>Finley's blog</title>
     </head>
+
     <body>
         <div>
             <h1>Finley's Blog</h1>
         </div>
 
-<p><a href="https://www.google.com/search?q=dog&oq=dog&aqs=chrome..69i57j69i60l5.350j0j7&sourceid=chrome&es_sm=91&ie=UTF-8">dog</a></p>
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        {{ post.text|linebreaks }}
+    </div>
+{% endfor %}
 
-        <div>
-            <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+
     </body>
 </html>
