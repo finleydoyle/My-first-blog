@@ -12,6 +12,10 @@
 
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
+
             <h1>Finley Doyle</h1>
             <img src="https://farm6.staticflickr.com/5743/20876955053_23b9d1187f_z.jpg" width="320" height="213" alt="Silverwear">
         </div>
