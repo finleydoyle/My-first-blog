@@ -1,3 +1,12 @@
 cd ~/code/djangogirls
 source myvenv/bin/activate
 python manage.py runserver
+
+
+#deploy to production
+cd ~/code/djangogirls
+
+git status
+git add -A.
+
+git commit -m 'xxx'
